@@ -1,92 +1,198 @@
+/* ---------- PAGE BASE ---------- */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b0b0f;
-    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05060a;
+    color: #f5f5f5;
 }
+
+
+/* ---------- Animated Background ---------- */
+
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg-shapes span {
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: rgba(0, 160, 255, 0.35);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 160, 255, 0.8);
+    animation: float 14s linear infinite;
+    bottom: -200px;
+}
+
+.bg-shapes span:nth-child(1) {
+    left: 5%;
+    animation-duration: 16s;
+}
+
+.bg-shapes span:nth-child(2) {
+    left: 20%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.bg-shapes span:nth-child(3) {
+    left: 35%;
+    animation-duration: 14s;
+    animation-delay: 4s;
+}
+
+.bg-shapes span:nth-child(4) {
+    left: 50%;
+    animation-duration: 20s;
+    animation-delay: 1s;
+}
+
+.bg-shapes span:nth-child(5) {
+    left: 65%;
+    animation-duration: 17s;
+    animation-delay: 3s;
+}
+
+.bg-shapes span:nth-child(6) {
+    left: 80%;
+    animation-duration: 15s;
+    animation-delay: 5s;
+}
+
+.bg-shapes span:nth-child(7) {
+    left: 90%;
+    animation-duration: 22s;
+    animation-delay: 7s;
+}
+
+.bg-shapes span:nth-child(8) {
+    left: 40%;
+    animation-duration: 19s;
+    animation-delay: 6s;
+}
+
+.bg-shapes span:nth-child(9) {
+    left: 70%;
+    animation-duration: 21s;
+    animation-delay: 8s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-1200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* ---------- HEADER ---------- */
 
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
-    background: #151515;
-    border-bottom: 1px solid #2a2a2a;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
-    font-weight: bold;
     font-size: 24px;
+    font-weight: bold;
+    color: #00a0ff;
 }
 
-nav a {
-    margin-left: 20px;
+.nav-link {
+    color: #f5f5f5;
     text-decoration: none;
-    color: #bfbfbf;
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-nav a:hover {
-    color: #fff;
+.nav-link.active {
+    color: #00a0ff;
 }
+
+
+/* ---------- HERO ---------- */
 
 .hero {
-    text-align: center;
-    padding: 80px 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 40px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px;
 }
 
 .btn {
-    background: #1a7cff;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #00a0ff;
     color: #fff;
-    padding: 12px 20px;
     text-decoration: none;
     border-radius: 8px;
 }
 
-.library {
-    padding: 40px;
-}
 
-.alphabet {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
+/* ---------- HERO CARD ---------- */
 
-.alphabet button {
-    padding: 10px 12px;
-    background: #1a1a1a;
-    color: #fff;
-    border: 1px solid #333;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.alphabet button.active {
-    background: #1a7cff;
-    border-color: #1a7cff;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 10px;
+.hero-card {
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(0, 160, 255, 0.4);
     padding: 20px;
+    border-radius: 12px;
+    width: 280px;
 }
 
-.card h3 {
-    margin-top: 0;
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
-.card a {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #1a7cff;
+.stat-number {
+    font-size: 22px;
     font-weight: bold;
+    color: #00a0ff;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
