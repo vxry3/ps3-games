@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0f;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #151515;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    background: #1a7cff;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.library {
+    padding: 40px;
+}
+
+.alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.alphabet button {
+    padding: 10px 12px;
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.alphabet button.active {
+    background: #1a7cff;
+    border-color: #1a7cff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #1a7cff;
+    font-weight: bold;
+}
